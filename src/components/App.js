@@ -22,9 +22,10 @@ class App extends React.Component {
                     <UserCreate />
                 </LanguageContext.Provider>
 
-                <LanguageContext.Provider value="dutchs">
+                <LanguageContext.Provider value="dutch">
                     <UserCreate />
                 </LanguageContext.Provider>
+                <UserCreate />
             </div>
         );
     }
