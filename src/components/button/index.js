@@ -2,7 +2,6 @@ import React from 'react';
 import LanguageContext from '../../contexts/LanguageContext';
 
 class Button extends React.Component {
-    static contextType = LanguageContext;
     language = {
         'english': {
             'text': 'Submit'
@@ -14,9 +13,18 @@ class Button extends React.Component {
             'text': 'Voorleggen'
         }
     };
+
+    renderSubmit(value) {
+        return this.language[value].text;
+    }
     render() {
-        const text = this.language[this.context].text;
-        return <button className="ui button primary">{text}</button>;
+        return (
+            <button className="ui button primary">
+                <LanguageContext.Consumer>
+                    {(value) => this.renderSubmit(value)}
+                </LanguageContext.Consumer>
+            </button>
+        )
     }
 }
 // You can use this way to declarate the contextType
