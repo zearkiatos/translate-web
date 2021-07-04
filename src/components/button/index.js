@@ -1,5 +1,6 @@
 import React from 'react';
 import LanguageContext from '../../contexts/LanguageContext';
+import ColorContext from '../../contexts/ColorContext';
 
 class Button extends React.Component {
     language = {
@@ -14,16 +15,28 @@ class Button extends React.Component {
         }
     };
 
+    color = {
+
+    }
+
+    renderButton(color) {
+        return (
+            <button className={`ui button ${color}`}>
+                <LanguageContext.Consumer>
+                    {(value) => this.renderSubmit(value)}
+                </LanguageContext.Consumer>
+            </button>
+        );
+    }
+
     renderSubmit(value) {
         return this.language[value].text;
     }
     render() {
         return (
-            <button className="ui button primary">
-                <LanguageContext.Consumer>
-                    {(value) => this.renderSubmit(value)}
-                </LanguageContext.Consumer>
-            </button>
+            <ColorContext.Consumer>
+                {(color) => this.renderButton(color)}
+            </ColorContext.Consumer>
         )
     }
 }
