@@ -21,6 +21,10 @@ class App extends React.Component {
                 <LanguageContext.Provider value={this.state.language}>
                     <UserCreate />
                 </LanguageContext.Provider>
+
+                <LanguageContext.Provider value="dutchs">
+                    <UserCreate />
+                </LanguageContext.Provider>
             </div>
         );
     }
