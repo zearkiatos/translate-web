@@ -1,3 +1,13 @@
+## Project link
+
+Netlify: [https://translate-web.netlify.app](https://translate-web.netlify.app)
+
+Vercel: [https://translate-web.vercel.app/](https://translate-web.vercel.app/)
+
+Github: [https://zearkiatos.github.io/translate-web/](https://zearkiatos.github.io/translate-web/)
+
+Gitlab🦊: [https://caprilespe.gitlab.io/translate-web/](https://caprilespe.gitlab.io/translate-web/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
