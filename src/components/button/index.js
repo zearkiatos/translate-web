@@ -30,7 +30,8 @@ class Button extends React.Component {
     }
 
     renderSubmit(value) {
-        return this.language[value].text;
+        const field = value.language ? value.language : value;
+        return this.language[field].text;
     }
     render() {
         return (
