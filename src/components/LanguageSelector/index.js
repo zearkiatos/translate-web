@@ -1,18 +1,20 @@
 import React from "react";
+import LanguageContext from '../../contexts/LanguageContext';
 
 class LanguageSelector extends React.Component {
+  static contextType = LanguageContext;
   render() {
     return (
       <div>
-        Select a Language:
+        Select a Language with Redux ⚛️:
         <i
           className="flag us"
-          onClick={() => this.props.onLanguageChange("english")}
+          onClick={() => this.context.onLanguageChange("english")}
         />
-        <i className="flag nl" onClick={() => this.props.onLanguageChange("dutch")} />
+        <i className="flag nl" onClick={() => this.context.onLanguageChange("dutch")} />
         <i
           className="flag es"
-          onClick={() => this.props.onLanguageChange("spanish")}
+          onClick={() => this.context.onLanguageChange("spanish")}
         />
       </div>
     );
